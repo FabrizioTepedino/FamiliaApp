@@ -10,7 +10,7 @@ def familiar(request, relacion, nombre, edad, cumpleagnos):
     mi_familiar = Familia(relacion = relacion, nombre = nombre, edad = edad, cumpleagnos = cumpleagnos)
     mi_familiar.save()
 
-    miHtml = open('C:/Users/Usuario/Desktop/UBA/Z. Python Coderhouse/proyectoFamilia/projectFamiliaApp/projectFamiliaApp/Plantillas/template1.html')
+    miHtml = open('C:/Users/Usuario/Desktop/UBA/Z. Python Coderhouse/proyectoFamilia/projectFamiliaApp/projectFamiliaApp/Plantillas/CreaFamiliar.html')
 
     plantilla = Template(miHtml.read())
 
@@ -21,5 +21,4 @@ def familiar(request, relacion, nombre, edad, cumpleagnos):
     documento = plantilla.render(miContexto)
 
     return HttpResponse(documento)
-
     
